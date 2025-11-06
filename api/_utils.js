@@ -9,7 +9,6 @@ export const supabase = createClient(supabaseUrl, supabaseKey);
 
 const rpcUrls = [
     'https://endpoints.omniatech.io/v1/sol/mainnet/618af18c4f394ec389c280db568df58c',
-    'https://rpc.shyft.to?api_key=oghkpINRhX40UIqd',
     'https://greed-solanam-54f5.mainnet.rpcpool.com/bc4d1328-18af-4dda-86ae-e70bdf5ed25e'
 ];
 const dasApiKeys = [
@@ -84,3 +83,4 @@ export async function fetchAssetsForAddress(walletAddress) {
 export function calculateValue(spl, nfts) {
     return Number((((spl || 0) + (nfts || 0)) * 0.00203928 * 190).toFixed(0));
 }
+
